@@ -1,0 +1,16 @@
+.icon {
+    width: 30px;
+    padding: 2px;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+}
+
+.icon:first-child {
+    margin-right: 10px;
+}
+
+.icon:hover {
+    background-color: gainsboro;
+}
