@@ -7,13 +7,50 @@ import './App.css';
 
 export default class App extends React.Component {
 
-    state = {
-        todoData: [
-            {id: 1, title: 'Пофлэксить', important: false, done: false},
-            {id: 2, title: 'Залить соляру', important: false, done: false},
-            {id: 3, title: 'Не кринжануть', important: false, done: false}
-        ],
-        filter: '',
+    constructor(props) {
+        super(props);
+        this.state = {
+            todoData: [
+                {id: 1, title: 'Пофлэксить', important: false, done: false},
+                {id: 2, title: 'Залить соляру', important: false, done: false},
+                {id: 3, title: 'Не кринжануть', important: false, done: false}
+            ],
+            filter: '',
+            add: '',
+        }
+        this.idGenerator = 4;
+        this.onAddItem = this.onAddItem.bind(this);
+        this.onRemoveItem = this.onRemoveItem.bind(this);
+        this.onNameChange = this.onNameChange.bind(this);
+    }
+
+    onAddItem(text) {
+        this.setState(({ todoData }) => {
+            const newItem = {
+                id: ++this.idGenerator,
+                title: text,
+                important: false,
+                done: false
+            }
+            const newArray = [...todoData, newItem];
+
+            return {
+                add: '',
+                todoData: newArray
+            }
+        });
+    }
+
+    onRemoveItem() {
+        this.setState(({ todoData }) => {
+            
+        });
+    }
+
+    onNameChange(text) {
+        this.setState({
+            add: text
+        });
     }
 
     render() {
@@ -23,8 +60,13 @@ export default class App extends React.Component {
                 <SearchPanel />
                 <TodoList 
                     todoData = {this.state.todoData}
+                    onRemoveItem = {this.onRemoveItem}
                 />
-                <ItemsAddForm />
+                <ItemsAddForm 
+                    onAddItem = {this.onAddItem}
+                    onNameChange = {this.onNameChange}
+                    add = {this.state.add}
+                />
             </div>
         );
     }
