@@ -1,7 +1,7 @@
 import React from 'react';
 import './TodoListItem.css';
 
-function TodoListItem({ title }) {
+function TodoListItem({ title, onRemoveItem }) {
     return(
         <li>
             <div>
@@ -11,7 +11,7 @@ function TodoListItem({ title }) {
                 <button className = 'icon'>
                     <i className = 'fa fa-exclamation fa-2x'></i>
                 </button>
-                <button className = 'icon'>
+                <button className = 'icon' onClick = {onRemoveItem}>
                     <i className = 'fa fa-trash-o fa-2x'></i>
                 </button>
             </div>

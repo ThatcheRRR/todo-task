@@ -22,6 +22,7 @@ export default class App extends React.Component {
         this.onAddItem = this.onAddItem.bind(this);
         this.onRemoveItem = this.onRemoveItem.bind(this);
         this.onNameChange = this.onNameChange.bind(this);
+        this.onImportantSet = this.onImportantSet.bind(this);
     }
 
     onAddItem(text) {
@@ -41,9 +42,13 @@ export default class App extends React.Component {
         });
     }
 
-    onRemoveItem() {
+    onRemoveItem(id) {
         this.setState(({ todoData }) => {
-            
+            const idx = todoData.findIndex(item => item.id === id);
+
+            return {
+                todoData: [...todoData.splice(0, idx), ...todoData.splice(idx + 1)]
+            }
         });
     }
 
@@ -61,6 +66,7 @@ export default class App extends React.Component {
                 <TodoList 
                     todoData = {this.state.todoData}
                     onRemoveItem = {this.onRemoveItem}
+                    onImportantSet = {this.onImportantSet}
                 />
                 <ItemsAddForm 
                     onAddItem = {this.onAddItem}
