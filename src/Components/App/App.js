@@ -24,6 +24,8 @@ export default class App extends React.Component {
         this.onNameChange = this.onNameChange.bind(this);
         this.onImportantSet = this.onImportantSet.bind(this);
         this.onDoneSet = this.onDoneSet.bind(this);
+        this.onSearch = this.onSearch.bind(this);
+        this.searchItems = this.searchItems.bind(this);
     }
 
     onAddItem(text) {
@@ -88,18 +90,36 @@ export default class App extends React.Component {
         });
     }
 
+    onSearch(text) {
+        this.setState({
+            filter: text
+        });
+    }
+
+    searchItems(arr, text) {
+        if(text.length === 0) {
+            return arr;
+        }
+
+        return arr.filter(item => item.title.indexOf(text) > -1);
+    }
+
     render() {
         const done = this.state.todoData.filter(item => item.done).length;
         const todo = this.state.todoData.length - done;
+        const itemsForSearch = this.searchItems(this.state.todoData, this.state.filter);
         return(
             <div className = 'app'>
                 <Header 
                     done = {done}
                     todo = {todo}
                 />
-                <SearchPanel />
+                <SearchPanel 
+                    onSearch = {this.onSearch}
+                    filter = {this.state.filter}
+                />
                 <TodoList 
-                    todoData = {this.state.todoData}
+                    todoData = {itemsForSearch}
                     onRemoveItem = {this.onRemoveItem}
                     onDoneSet = {this.onDoneSet}
                     onImportantSet = {this.onImportantSet}
