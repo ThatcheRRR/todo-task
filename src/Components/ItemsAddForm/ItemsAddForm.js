@@ -1,7 +1,7 @@
 import React from 'react';
 import './ItemsAddForm.css';
 
-class ItemsAddForm extends React.Component {
+export default class ItemsAddForm extends React.Component {
 
     constructor(props) {
         super(props);
@@ -30,5 +30,3 @@ class ItemsAddForm extends React.Component {
         );
     }
 }
-
-export default ItemsAddForm;

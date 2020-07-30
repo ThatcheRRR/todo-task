@@ -1,7 +1,7 @@
 import React from 'react';
 import './SearchPanel.css';
 
-class SearchPanel extends React.Component {
+export default class SearchPanel extends React.Component {
 
     constructor(props) {
         super(props);
@@ -20,5 +20,3 @@ class SearchPanel extends React.Component {
         );
     }
 }
-
-export default SearchPanel;
