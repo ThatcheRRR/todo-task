@@ -89,9 +89,14 @@ export default class App extends React.Component {
     }
 
     render() {
+        const done = this.state.todoData.filter(item => item.done).length;
+        const todo = this.state.todoData.length - done;
         return(
             <div className = 'app'>
-                <Header />
+                <Header 
+                    done = {done}
+                    todo = {todo}
+                />
                 <SearchPanel />
                 <TodoList 
                     todoData = {this.state.todoData}

@@ -1,11 +1,11 @@
 import React from 'react';
 import './Header.css';
 
-function Header() {
+function Header({ done, todo }) {
     return(
         <header>
             <h1>Todo List</h1>
-            <p>3 more to do, 0 done</p>
+            <p>{todo} more to do, {done} done</p>
         </header>
     );
 }
