@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "44e3fb49c75b29e60db2341eca397f9f",
+    "revision": "4e735d98e250d43af1cb8c046cd746ed",
     "url": "/ThatcheRRR/todo-task/index.html"
   },
   {
-    "revision": "646dd594705b83acfb50",
+    "revision": "558da8e6c86d5559c471",
     "url": "/ThatcheRRR/todo-task/static/css/main.eb54dc22.chunk.css"
   },
   {
-    "revision": "cb2025b838cd9a1dbe91",
-    "url": "/ThatcheRRR/todo-task/static/js/2.f5dbd3df.chunk.js"
+    "revision": "90741759cf213442c528",
+    "url": "/ThatcheRRR/todo-task/static/js/2.183492e8.chunk.js"
   },
   {
     "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/ThatcheRRR/todo-task/static/js/2.f5dbd3df.chunk.js.LICENSE.txt"
+    "url": "/ThatcheRRR/todo-task/static/js/2.183492e8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "646dd594705b83acfb50",
-    "url": "/ThatcheRRR/todo-task/static/js/main.d3f943a8.chunk.js"
+    "revision": "558da8e6c86d5559c471",
+    "url": "/ThatcheRRR/todo-task/static/js/main.9bd61da9.chunk.js"
   },
   {
     "revision": "d7174647671cbca79892",
