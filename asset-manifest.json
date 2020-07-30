@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/ThatcheRRR/todo-task/static/css/main.eb54dc22.chunk.css",
-    "main.js": "/ThatcheRRR/todo-task/static/js/main.9bd61da9.chunk.js",
-    "main.js.map": "/ThatcheRRR/todo-task/static/js/main.9bd61da9.chunk.js.map",
-    "runtime-main.js": "/ThatcheRRR/todo-task/static/js/runtime-main.464fcae8.js",
-    "runtime-main.js.map": "/ThatcheRRR/todo-task/static/js/runtime-main.464fcae8.js.map",
-    "static/js/2.183492e8.chunk.js": "/ThatcheRRR/todo-task/static/js/2.183492e8.chunk.js",
-    "static/js/2.183492e8.chunk.js.map": "/ThatcheRRR/todo-task/static/js/2.183492e8.chunk.js.map",
-    "index.html": "/ThatcheRRR/todo-task/index.html",
-    "precache-manifest.0d86e028c85ea190675942c99ab2cc4b.js": "/ThatcheRRR/todo-task/precache-manifest.0d86e028c85ea190675942c99ab2cc4b.js",
-    "service-worker.js": "/ThatcheRRR/todo-task/service-worker.js",
-    "static/css/main.eb54dc22.chunk.css.map": "/ThatcheRRR/todo-task/static/css/main.eb54dc22.chunk.css.map",
-    "static/js/2.183492e8.chunk.js.LICENSE.txt": "/ThatcheRRR/todo-task/static/js/2.183492e8.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/ThatcheRRR/todo-task/static/media/Roboto-Regular.11eabca2.ttf"
+    "main.css": "/todo-task/static/css/main.2d5011b2.chunk.css",
+    "main.js": "/todo-task/static/js/main.9bd61da9.chunk.js",
+    "main.js.map": "/todo-task/static/js/main.9bd61da9.chunk.js.map",
+    "runtime-main.js": "/todo-task/static/js/runtime-main.98126e8f.js",
+    "runtime-main.js.map": "/todo-task/static/js/runtime-main.98126e8f.js.map",
+    "static/js/2.183492e8.chunk.js": "/todo-task/static/js/2.183492e8.chunk.js",
+    "static/js/2.183492e8.chunk.js.map": "/todo-task/static/js/2.183492e8.chunk.js.map",
+    "index.html": "/todo-task/index.html",
+    "precache-manifest.8bc827832bc5045a2ad4047237b32c31.js": "/todo-task/precache-manifest.8bc827832bc5045a2ad4047237b32c31.js",
+    "service-worker.js": "/todo-task/service-worker.js",
+    "static/css/main.2d5011b2.chunk.css.map": "/todo-task/static/css/main.2d5011b2.chunk.css.map",
+    "static/js/2.183492e8.chunk.js.LICENSE.txt": "/todo-task/static/js/2.183492e8.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/todo-task/static/media/Roboto-Regular.11eabca2.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.464fcae8.js",
+    "static/js/runtime-main.98126e8f.js",
     "static/js/2.183492e8.chunk.js",
-    "static/css/main.eb54dc22.chunk.css",
+    "static/css/main.2d5011b2.chunk.css",
     "static/js/main.9bd61da9.chunk.js"
   ]
 }
