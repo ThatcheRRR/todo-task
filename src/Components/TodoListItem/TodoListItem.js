@@ -1,14 +1,26 @@
 import React from 'react';
 import './TodoListItem.css';
 
-function TodoListItem({ title, onRemoveItem }) {
+function TodoListItem({ done, important, title, onRemoveItem, onImportantSet, onDoneSet }) {
+    let className = 'title';
+    let buttonClass = 'icon';
+
+    if(done) {
+        className += ' done';
+    }
+
+    if(important) {
+        className += ' important';
+        buttonClass += ' active';
+    }
+
     return(
         <li>
-            <div>
+            <span className = {className} onClick = {onDoneSet}>
                 {title}
-            </div>
+            </span>
             <div>
-                <button className = 'icon'>
+                <button className = {buttonClass} onClick = {onImportantSet}>
                     <i className = 'fa fa-exclamation fa-2x'></i>
                 </button>
                 <button className = 'icon' onClick = {onRemoveItem}>

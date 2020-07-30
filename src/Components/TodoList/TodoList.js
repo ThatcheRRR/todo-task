@@ -8,6 +8,10 @@ function TodoList(props) {
         key = {item.id} 
         title = {item.title} 
         onRemoveItem = {props.onRemoveItem.bind(this, item.id)}
+        onImportantSet = {props.onImportantSet.bind(this, item.id)}
+        onDoneSet = {props.onDoneSet.bind(this, item.id)}
+        done = {item.done}
+        important = {item.important}
         />
     });
 

@@ -23,6 +23,7 @@ export default class App extends React.Component {
         this.onRemoveItem = this.onRemoveItem.bind(this);
         this.onNameChange = this.onNameChange.bind(this);
         this.onImportantSet = this.onImportantSet.bind(this);
+        this.onDoneSet = this.onDoneSet.bind(this);
     }
 
     onAddItem(text) {
@@ -47,7 +48,36 @@ export default class App extends React.Component {
             const idx = todoData.findIndex(item => item.id === id);
 
             return {
-                todoData: [...todoData.splice(0, idx), ...todoData.splice(idx + 1)]
+                todoData: [...todoData.slice(0, idx), ...todoData.slice(idx + 1)]
+            }
+        });
+    }
+
+    setPropFunction(arr, id, propName) {
+        const idx = arr.findIndex(item => item.id === id);
+        const newItem = arr[idx];
+        newItem[propName] = !newItem[propName];
+
+        return {
+            arr: [...arr.slice(0, idx), newItem, ...arr.slice(idx + 1)]
+        }
+    }
+
+    onImportantSet(id) {
+        this.setState(({ todoData }) => {
+            const items = this.setPropFunction(todoData, id, 'important');
+            console.log(items.arr)
+            return {
+                todoData: items.arr
+            }
+        });
+    }
+
+    onDoneSet(id) {
+        this.setState(({ todoData }) => {
+            const items = this.setPropFunction(todoData, id, 'done');
+            return {
+                todoData: items.arr
             }
         });
     }
@@ -66,6 +96,7 @@ export default class App extends React.Component {
                 <TodoList 
                     todoData = {this.state.todoData}
                     onRemoveItem = {this.onRemoveItem}
+                    onDoneSet = {this.onDoneSet}
                     onImportantSet = {this.onImportantSet}
                 />
                 <ItemsAddForm 

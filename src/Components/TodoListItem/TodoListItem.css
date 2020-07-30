@@ -7,10 +7,28 @@
     border-radius: 5px;
 }
 
+.icon.active {
+    border-color: green;
+}
+
 .icon:first-child {
     margin-right: 10px;
 }
 
 .icon:hover {
     background-color: gainsboro;
+}
+
+.title:hover {
+    cursor: pointer;
+}
+
+.title.done {
+    font-weight: bold;
+    text-decoration: line-through;
+    color: dodgerblue;
+}
+
+.title.important {
+    font-weight: bold;
 }
